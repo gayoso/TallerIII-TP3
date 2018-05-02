@@ -1,0 +1,3 @@
+queue:
+- name: trips-per-day
+  mode: pull

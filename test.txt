@@ -1,0 +1,12 @@
+/registerTaxi?driverName=gabo
+
+/startTrip?driverId=ag9pfnRhbGxlcjMtdHAzLTFyEQsSBFRheGkYgICAgICAgAoM&datetime=2018-04-18 21:17:33&latitude=50&longitude=20
+/endTrip?datetime=2018-04-18 22:17:33&latitude=51&longitude=21&distance=100.5&tripId=ag9pfnRhbGxlcjMtdHAzLTFyGwsSBFRheGkYgICAgICAgAoMCxIEVHJpcBgBDA
+
+/startTrip?driverId=ag9pfnRhbGxlcjMtdHAzLTFyEQsSBFRheGkYgICAgICAgAoM&datetime=2018-04-20 21:17:33&latitude=89&longitude=11
+/endTrip?datetime=2018-04-20 22:18:33&latitude=89&longitude=11&distance=1.5&tripId=aghkZXZ-Tm9uZXIbCxIEVGF4aRiAgICAgICACgwLEgRUcmlwGAIM
+
+
+/registerTaxi?driverName=fede
+/startTrip?driverId=aghkZXZ-Tm9uZXIRCxIEVGF4aRiAgICAgICACQw&datetime=2018-04-19 21:17:33&latitude=50&longitude=20
+/endTrip?datetime=2018-04-19 22:17:33&latitude=51&longitude=21&distance=100.5&tripId=aghkZXZ-Tm9uZXIbCxIEVGF4aRiAgICAgICACQwLEgRUcmlwGAMM

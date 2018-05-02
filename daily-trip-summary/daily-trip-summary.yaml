@@ -1,0 +1,15 @@
+# ------------------------
+
+service: daily-trip-summary
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+  
+- url: /tasks/daily-trip-summary
+  script: dailyTripSummary.app
+
+libraries:
+- name: webapp2
+  version: latest

@@ -1,0 +1,5 @@
+cron:
+- description: "daily trips summary"
+  url: /tasks/daily-trip-summary
+  target: daily-trip-summary
+  schedule: every 8 hours

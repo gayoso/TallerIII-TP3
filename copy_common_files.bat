@@ -1,0 +1,5 @@
+for /r "." %%i in (.) do @copy "cron.yaml" "%%i"
+for /r "." %%i in (.) do @copy "queue.yaml" "%%i"
+for /r "." %%i in (.) do @copy "Models.py" "%%i"
+for /r "." %%i in (.) do @copy "dispatch.yaml" "%%i"
+for /r "." %%i in (.) do @copy "Configuration.py" "%%i"

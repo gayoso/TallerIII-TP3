@@ -1,0 +1,28 @@
+# ------------------------
+
+service: taxis-handler
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /registerTaxi
+  script: registerTaxi.app
+  
+- url: /startTrip
+  script: startTrip.app
+
+- url: /endTrip
+  script: endTrip.app
+  
+- url: /checkFacturacion
+  script: checkFacturacion.app
+  
+libraries:
+
+- name: webapp2
+  version: latest
+  
+- name: jinja2
+  version: latest

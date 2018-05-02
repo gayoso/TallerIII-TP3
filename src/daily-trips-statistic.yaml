@@ -1,0 +1,18 @@
+# ------------------------
+  
+service: daily-trips-statistic
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+  
+- url: /dailyTripsStatistic
+  script: dailyTripsStatistic.app
+  
+libraries:
+- name: webapp2
+  version: latest
+  
+- name: jinja2
+  version: latest

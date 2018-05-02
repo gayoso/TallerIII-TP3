@@ -1,0 +1,22 @@
+dispatch:
+
+- url: "*/startTrip"
+  service: taxis-handler
+
+- url: "*/registerTaxi"
+  service: taxis-handler
+
+- url: "*/endTrip"
+  service: taxis-handler
+  
+- url: "*/checkFacturacion"
+  service: taxis-handler
+
+- url: "*/tasks/daily-trip-summary"
+  service: daily-trip-summary
+  
+- url: "*/adminQuery"
+  service: admin-query
+  
+- url: "*/dailyTripsStatistic"
+  service: daily-trips-statistic

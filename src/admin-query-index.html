@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		<style type="text/css">
+		body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			background-color: #f5f5f5;
+		}
+		blockquote {
+			margin-bottom: 10px;
+			border-left-color: #bbb;
+		}
+		form {
+			margin-top: 10px;
+		}
+		.form-signin input[type="text"] {
+			font-size: 16px;
+			height: auto;
+			margin-bottom: 15px;
+			padding: 7px 9px;
+		}
+		.row {
+			margin-left: 0px;
+			margin-top: 10px;
+			overflow: scroll;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>Acceso de administrador</h2>
+		
+		<form action="/adminQuery" method="post">
+			<input type="text" name="driverId" value={{driverId}}>
+			<input type="date" name="query_date_from" value={{query_date_from}}>
+			<input type="date" name="query_date_to" value={{query_date_to}}>
+			<input type="submit">
+			trips per page:
+			<input type="number" name="TRIPS_PER_PAGE" value={{TRIPS_PER_PAGE}}>
+		</form>
+		
+		<!-- [START results] -->
+		<div class="container">
+		{% for result in results %}
+			<div class="row">
+				Driver name: {{result.driver}},
+				Pickup time: {{result.trip.pickup_datetime}}, 
+				Pickup location: {{result.trip.pickup_location}},
+				Dropoff time: {{result.trip.dropoff_datetime}}, 
+				Dropoff location: {{result.trip.dropoff_location}},
+				Distance: {{result.trip.distance}}
+			</div>
+		{% endfor %}
+		</div>
+		<!-- [END results] -->
+		
+		<form action="/adminQuery" method="post">
+			<input type="hidden" name="driverId" value={{driverId}}>
+			<input type="hidden" name="query_date_from" value={{query_date_from}}>
+			<input type="hidden" name="query_date_to" value={{query_date_to}}>
+			<input type="hidden" name="prev_cursor" value={{prev_cursor}}>
+			<input type="hidden" name="next_cursor" value={{next_cursor}}>
+			<input type="hidden" name="TRIPS_PER_PAGE" value={{TRIPS_PER_PAGE}}>
+			
+			{% if prev_cursor != "" %}
+			<input type="submit" name="prev" value="prev">
+			{% endif %}
+			
+			{% if next_cursor != "" %}
+			<input type="submit" name="next" value="next">
+			{% endif %}
+			
+		</form>
+		
+	</body>
+</html>
+{% endautoescape %}

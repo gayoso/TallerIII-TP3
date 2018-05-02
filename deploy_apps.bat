@@ -1,0 +1,1 @@
+gcloud app deploy ./default ./taxis-handler/taxis-handler.yaml ./admin-query/admin-query.yaml ./daily-trip-summary/daily-trip-summary.yaml ./daily-trips-statistic/daily-trips-statistic.yaml dispatch.yaml
